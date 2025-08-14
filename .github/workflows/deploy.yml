@@ -35,3 +35,4 @@ jobs:
               run: |
                 mkdir -p ~/.kube && echo "${{ secrets.KUBE_CONFIG_BASE64_DATA }}" | base64 -d > ~/.kube/config
                 kubectl apply -f ./kube-metrics/.
+                helm upgrade --install node-exporter -f ./node-exporter/values.yaml ./node-exporter/. --version 1.6.0 --namespace monitoring --create-namespace --wait
