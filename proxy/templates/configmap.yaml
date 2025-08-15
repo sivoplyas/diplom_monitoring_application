@@ -14,7 +14,7 @@ data:
     Listen {{ .Values.listenHttp }}:{{ .Values.httpPort }}
   proxy.conf: |
     <VirtualHost *:{{ .Values.httpPort }}>
-        ServerName ssa
+        ServerName 51.250.32.22
         DocumentRoot /var/www/html
         CustomLog /var/log/apache2/web-log combined
         ErrorLog /var/log/apache2/web-err.log
