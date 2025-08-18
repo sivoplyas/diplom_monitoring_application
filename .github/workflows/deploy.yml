@@ -1,4 +1,4 @@
-name: Docker Build
+name: Deploy monitoring
 on:
   push:
     branches: ["main"]
@@ -38,4 +38,4 @@ jobs:
                 helm upgrade --install node-exporter -f ./node-exporter/values.yaml ./node-exporter/. --version 1.6.0 --namespace monitoring --create-namespace --wait
                 helm upgrade --install prometheus -f ./prometheus/values.yaml ./prometheus/. --version 1.6.0 --namespace monitoring --create-namespace --wait
                 helm upgrade --install grafana -f ./grafana/values.yaml ./grafana/. --version 1.5.1 --namespace monitoring --create-namespace --wait
-                helm upgrade --install proxy -f ./proxy/values.yaml ./proxy/. --version 1.0.1 --namespace ssa --create-namespace --wait
+                helm upgrade --install proxy -f ./proxy/values.yaml ./proxy/. --version 1.0.1 --namespace monitoring --create-namespace --wait
