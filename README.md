@@ -1,2 +1,1 @@
-# diplom_monitoring_application
-diplom_monitoring_application
+# Репозиторий системы мониторинга и proxy для дипломной работы
